@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <string.h>
 
 int CalculaIteracoes(char str1[], char str2[]){
 	int size1=0, size2=0, i=0, j=0;
 	
-	for(i = 0; i < sizeof(str1); i++){
+	/*for(i = 0; i < sizeof(str1); i++){
 		
 		if(str1[i] == 0)
 			break;
@@ -20,6 +21,13 @@ int CalculaIteracoes(char str1[], char str2[]){
 		else			
 			size2++;
 	}	
+	
+	if(size1 > size2 || size1 == size2)
+		return size1;*/
+	
+		
+	size1 = strlen(str1);
+	size2 = strlen(str2);	
 	
 	if(size1 > size2 || size1 == size2)
 		return size1;
@@ -40,13 +48,8 @@ int ComparaString(char str1[], char str2[]) {
 	
 	for (i = 0; i < n; i++)
 	{
-		if (ptr1[i] < ptr2[i]) {
-			compara1--;
-		}
-		else
-			if (ptr1[i] > ptr2[i]) {
-				compara1++;
-			}
+		compara1 += str1[i];
+		compara2 += str2[i];
 	}
 
 	if (compara1 < compara2)
@@ -61,16 +64,22 @@ int ComparaString(char str1[], char str2[]) {
 	return compara;
 }
 
-
 int main()
 {
 	char str1[50], str2[50];
-	int compara = 0;
+	int compara = 0, teste, ch=0, ch2, ch3;
 
 	printf("Informe a primeira palavra:\n");
 	gets(str1);
 	printf("Informe a segunda palavra:\n");
 	gets(str2);
+	
+	ch = getchar();
+	ch2 = getchar();
+	ch3 = getchar();
+	teste = atoi(str1);
+	teste = atoi(str2);  
+
 
 	compara = ComparaString(str1, str2);
 

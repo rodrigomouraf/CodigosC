@@ -1,0 +1,3 @@
+﻿  sudoku.cpp
+C:\Users\rodri\Documents\Cursos\UFPR\LinguagemC\Codigos\sudoku\sudoku\sudoku.cpp(435,46): warning C4101: 'validaRespostaLinha': variável local não referenciada
+  sudoku.vcxproj -> C:\Users\rodri\Documents\Cursos\UFPR\LinguagemC\Codigos\sudoku\Debug\sudoku.exe
