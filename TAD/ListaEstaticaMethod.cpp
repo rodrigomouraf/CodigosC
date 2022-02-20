@@ -19,7 +19,7 @@ void get_list(ListE* l){
 	if(l == NULL)
 		return retorna_status_insercao(3);
 	
-	printf("Lista: ");
+	printf("\n Os valore da lista sao: ");
 	for(int i = 0; i < l->fim; i++){
 		printf("%d ",l->dados[i]);
 	}
@@ -28,7 +28,7 @@ void get_list(ListE* l){
 }
 
 void get_posicao(ListE* l, int posicao){
-	printf("Entrado no metodo de busca por posicao\n");
+	printf("\nEntrado no metodo de busca por posicao\n");
 	
 	if(l == NULL || posicao <= 0 || posicao > l->fim){
 		printf("Nao foi possivel encontrar o valor da sua lista nesta posicao,\nverifique se sua consulta esta respeitando o limite de sua lista, que no momento eh de 1 ah %d", l->fim);
@@ -38,7 +38,7 @@ void get_posicao(ListE* l, int posicao){
 }
 
 void get_valor(ListE* l, int dado){
-	printf("Entrado no metodo de busca por valor\n");
+	printf("\nEntrado no metodo de busca por valor\n");
 	
 	if(l == NULL){
 		printf("Lista vazia");
@@ -61,7 +61,7 @@ void get_valor(ListE* l, int dado){
 //Funções de exclusão
 
 void remover_inicio(ListE* l){
-	printf("solicitado a remocao do primeiro item da Lista %d\n", l->dados[0]);
+	printf("\nsolicitado a remocao do primeiro item da Lista %d\n", l->dados[0]);
 	
 	if(l != NULL){
 		int fim=l->fim-1;
@@ -76,13 +76,13 @@ void remover_inicio(ListE* l){
 }
 
 void remover_fim(ListE* l){
-	printf("solicitado a remocao do ultimo item da Lista %d\n", l->dados[l->fim-1]);
+	printf("\nsolicitado a remocao do ultimo item da Lista %d\n", l->dados[l->fim-1]);
 	
 	l->fim--;
 }
 
 void remover_meio(ListE* l, int dado){
-	printf("solicitado a remocao do valor: %d \n", dado);
+	printf("\nsolicitado a remocao do valor: %d \n", dado);
 	
 	int fim = l->fim-1;
 	int remover = -1;
@@ -107,7 +107,7 @@ void remover_meio(ListE* l, int dado){
 
 void inserir_inicio(ListE* l, int dado){
 	
-	printf("solicitado a insercao do valor: %d no inicio da lista\n", dado);
+	printf("\nsolicitado a insercao do valor: %d no inicio da lista\n", dado);
 	
 	if(valida_list(l)){
 		
@@ -124,7 +124,7 @@ void inserir_inicio(ListE* l, int dado){
 
 void inserir_fim(ListE* l, int dado){
 	
-	printf("solicitado a insercao do valor: %d no fim da lista\n", dado);
+	printf("\nsolicitado a insercao do valor: %d no fim da lista\n", dado);
 	
 	if(valida_list(l)){
 		l->dados[l->fim] = dado;
@@ -136,7 +136,7 @@ void inserir_fim(ListE* l, int dado){
 
 void inserir_meio(ListE* l, int dado){
 	
-	printf("solicitado a insercao do valor: %d ordenadamente na lista\n", dado);
+	printf("\nsolicitado a insercao do valor: %d ordenadamente na lista\n", dado);
 	
 	if(valida_list(l)){
 		
